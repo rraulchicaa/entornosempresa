@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MALVASIA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #f8f1e5;
+            color: #3e2723;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        header {
+            background: #6d4c41;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            width: 60%;
+            max-width: 450px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: #4e342e;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-size: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #8d6e63;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 40px;
+            margin: 20px 40px;
+            text-align: center;
+        }
+
+        .formulario-contacto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .formulario-contacto input,
+        .formulario-contacto textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .formulario-contacto button {
+            background-color: #6d4c41;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .formulario-contacto button:hover {
+            background-color: #8d6e63;
+        }
+      
+
+        footer {
+            width: 100%;
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 17px;
+            margin-top: auto; 
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="fotos/logoblanco.png" alt="Logo de Cafetería MALVASIA">
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cafe.html">Cafés</a></li>
+        <li><a href="vino.html">Vinos</a></li>
+        <li><a href="tapas.html">Tapas</a></li> 
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="valo.html">Valoraciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="patrocinadores.html">Patrocinadores</a></li>
+    </ul>
+</nav>
+
+<section class="container">
+    <h2>Formulario de Contacto</h2>
+    <p>Por favor, rellena el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+    
+    <form class="formulario-contacto" id="contact-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono" pattern="^[0-9]{9}$" title="El teléfono debe tener 9 dígitos (solo números)">
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required placeholder="Tu correo electrónico">
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required placeholder="Asunto del mensaje">
+
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 MALVASIA | Contacto: malvasiatorrent@gmail.com | Tel: 665 45 26 85</p>
+</footer>
+
+<script>
+    // Función de validación del formulario
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        let nombre = document.getElementById("nombre").value;
+        let telefono = document.getElementById("telefono").value;
+        let correo = document.getElementById("correo").value;
+        let asunto = document.getElementById("asunto").value;
+
+        // Validación de nombre (no vacío)
+        if (nombre.trim() === "") {
+            alert("Por favor, ingresa tu nombre.");
+            event.preventDefault(); // Detiene el envío del formulario
+            return;
+        }
+
+        // Validación de teléfono (debe tener 9 dígitos)
+        if (!/^[0-9]{9}$/.test(telefono)) {
+            alert("Por favor, ingresa un teléfono válido (9 dígitos).");
+            event.preventDefault();
+            return;
+        }
+
+        // Validación de correo (debe ser un correo válido)
+        if (!/\S+@\S+\.\S+/.test(correo)) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            event.preventDefault();
+            return;
+        }
+
+        // Validación de asunto (no vacío)
+        if (asunto.trim() === "") {
+            alert("Por favor, ingresa un asunto.");
+            event.preventDefault();
+            return;
+        }
+
+        // Si todo es correcto, el formulario se envía
+        alert("Formulario enviado correctamente.");
+    });
+</script>
+
+</body>
+</html>
