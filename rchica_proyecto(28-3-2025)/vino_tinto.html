@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vino Tinto - MALVASIA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #f8f1e5;
+            color: #3e2723;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #6d4c41;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            width: 60%;
+            max-width: 450px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: #4e342e;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-size: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #8d6e63;
+            border-radius: 5px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            margin: 20px 40px;
+            flex: 1;
+        }
+
+        .vino-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .vino-info .detalle {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .vino-info h3 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .vino-info p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .vino-info .imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .vino-info .imagenes img {
+            width: 250px;
+            height: 250px; /* Establece tanto el ancho como el alto */
+            object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio sin distorsionarse */
+            border-radius: 10px;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .vino-info .imagenes img:hover {
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #6d4c41;
+            color: white;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background 0.3s;
+            text-align: center;
+        }
+
+        .back-btn:hover {
+            background: #4e342e;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="fotos/logoblanco.png" alt="Logo de Cafetería MALVASIA">
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cafe.html">Cafés</a></li>
+        <li><a href="vino.html">Vinos</a></li>
+        <li><a href="tapas.html">Tapas</a></li> 
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="valo.html">Valoraciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="patrocinadores.html">Patrocinadores</a></li>
+    </ul>
+</nav>
+
+
+<section class="container">
+    <h2>Vino Tinto</h2>
+    <div class="vino-info">
+        <div class="detalle">
+            <p>El vino tinto es una opción robusta y sofisticada, ideal para acompañar platos fuertes como carnes rojas, guisos o quesos curados. Su sabor intenso y afrutado lo convierte en una excelente elección para aquellos que disfrutan de vinos con cuerpo y carácter.</p>
+            <p>Con notas especiadas y taninos suaves, el vino tinto ofrece una experiencia de sabor única, que se adapta perfectamente a diversas comidas y momentos de la vida social.</p>
+            <a href="vino.html" class="back-btn">Volver al Menú de Vinos</a>
+        </div>
+
+        <!-- Aquí se muestran las 5 imágenes en fila -->
+        <div class="imagenes">
+            <img src="fotos/1.png" alt="Vino Tinto 1">
+            <img src="fotos/2.png" alt="Vino Tinto 2">
+            <img src="fotos/4.png" alt="Vino Tinto 3">
+            <img src="fotos/6.png" alt="Vino Tinto 4">
+            <img src="fotos/9.png" alt="Vino Tinto 5">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 MALVASIA | Contacto: malvasiatorrent@gmail.com | Tel: 665 45 26 85</p>
+</footer>
+
+</body>
+</html>
