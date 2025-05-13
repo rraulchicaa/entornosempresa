@@ -179,35 +179,30 @@
         let correo = document.getElementById("correo").value;
         let asunto = document.getElementById("asunto").value;
 
-        // Validación de nombre (no vacío)
         if (nombre.trim() === "") {
             alert("Por favor, ingresa tu nombre.");
-            event.preventDefault(); // Detiene el envío del formulario
+            event.preventDefault(); 
             return;
         }
 
-        // Validación de teléfono (debe tener 9 dígitos)
         if (!/^[0-9]{9}$/.test(telefono)) {
             alert("Por favor, ingresa un teléfono válido (9 dígitos).");
             event.preventDefault();
             return;
         }
 
-        // Validación de correo (debe ser un correo válido)
         if (!/\S+@\S+\.\S+/.test(correo)) {
             alert("Por favor, ingresa un correo electrónico válido.");
             event.preventDefault();
             return;
         }
 
-        // Validación de asunto (no vacío)
         if (asunto.trim() === "") {
             alert("Por favor, ingresa un asunto.");
             event.preventDefault();
             return;
         }
 
-        // Si todo es correcto, el formulario se envía
         alert("Formulario enviado correctamente.");
     });
 </script>
