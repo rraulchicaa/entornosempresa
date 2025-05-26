@@ -1,0 +1,9 @@
+# Ignorar todos los archivos de imagen en la carpeta fotos
+rchica_proyecto(28-3-2025)/fotos/*.png
+rchica_proyecto(28-3-2025)/fotos/*.jpg
+rchica_proyecto(28-3-2025)/fotos/*.jpeg
+rchica_proyecto(28-3-2025)/fotos/*.gif
+rchica_proyecto(28-3-2025)/fotos/*.webp
+rchica_proyecto(28-3-2025)/fotos/*.bmp
+rchica_proyecto(28-3-2025)/fotos/*.tiff
+rchica_proyecto(28-3-2025)/fotos/*.svg
