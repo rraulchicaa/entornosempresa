@@ -1,208 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - MALVASIA</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            background: #f8f1e5;
-            color: #3e2723;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; 
-        }
-
-        header {
-            background: #6d4c41;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        header img {
-            width: 60%;
-            max-width: 450px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        nav {
-            background: #4e342e;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            font-size: 15px;
-        }
-
-        nav ul {
-            list-style: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            padding: 10px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            background: #8d6e63;
-            border-radius: 5px;
-        }
-
-        .container {
-            padding: 40px;
-            margin: 20px 40px;
-            text-align: center;
-        }
-
-        .reseña {
-            display: inline-block;
-            margin: 20px;
-            text-align: left;
-            width: 300px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 100%;
-        }
-
-        .reseña img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .reseña .foto {
-            margin-bottom: 20px;
-        }
-
-        .ver-mas-btn {
-            background-color: #6d4c41;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 30px;
-            transition: background-color 0.3s;
-        }
-
-        .ver-mas-btn:hover {
-            background-color: #8d6e63;
-        }
-
-        footer {
-            width: 100%;
-            background-color: #3e2723;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 17px;
-            margin-top: auto; 
-        }
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reseñas - MALVASIA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f8f1e5;
+      color: #3e2723;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header img {
+      width: 100%;
+      max-width: 450px;
+      display: block;
+      margin: 20px auto;
+    }
+    .navbar {
+      background-color: #4e342e;
+    }
+    .navbar a {
+      color: #fff !important;
+      font-size: 1.1em;
+    }
+    .navbar a:hover {
+      background: #8d6e63;
+      border-radius: 5px;
+    }
+    main.container {
+      flex: 1;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+    .reseñas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      max-width: 320px;
+      text-align: center;
+      padding: 20px;
+      flex: 1 1 300px;
+    }
+    .card img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .btn-custom {
+      background-color: #6d4c41;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      padding: 10px 30px;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+    .btn-custom:hover {
+      background-color: #8d6e63;
+      color: white;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+      font-size: 17px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="fotos/logoblanco.png" alt="Logo de Cafetería MALVASIA">
-</header>
+  <header class="text-white text-center py-4" style="background-color: #6d4c41;">
+    <img src="fotos/logoblanco.png" alt="Logo de Cafetería MALVASIA" class="img-fluid" style="max-width: 300px;" />
+  </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cafe.html">Cafés</a></li>
-        <li><a href="vino.html">Vinos</a></li>
-        <li><a href="tapas.html">Tapas</a></li> 
-        <li><a href="ofertas.html">Ofertas</a></li>
-        <li><a href="valo.html">Valoraciones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="patrocinadores.html">Patrocinadores</a></li>
-    </ul>
-</nav>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="cafe.html">Cafés</a></li>
+        <li class="nav-item"><a class="nav-link" href="vino.html">Vinos</a></li>
+        <li class="nav-item"><a class="nav-link" href="tapas.html">Tapas</a></li>
+        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+        <li class="nav-item"><a class="nav-link" href="valo.html">Valoraciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="patrocinadores.html">Patrocinadores</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<section class="container">
+  <main class="container">
     <h2>Reseñas de nuestros clientes</h2>
-    
-    <div class="reseña">
-        <div class="foto">
-            <img src="fotos/re5.png" alt="Foto de Igor">
-        </div>
-        <h3>Игорь Королев</h3>
-        <p><strong>Hace 3 semanas - Merienda⭐⭐⭐⭐⭐</strong></p>
+
+    <div class="reseñas">
+
+      <div class="card">
+        <img src="fotos/re5.png" alt="Foto de Igor" />
+        <h5>Игорь Королев</h5>
+        <p><strong>Hace 3 semanas - Merienda ⭐⭐⭐⭐⭐</strong></p>
         <p>Un lugar con ambiente acogedor, excelente atención y una carta que sorprende. Probamos de varios platos y fue simplemente delicioso. La selección de vinos es espectacular.</p>
-        
-    </div>
+      </div>
 
-    <div class="reseña">
-        <div class="foto">
-            <img src="fotos/re3.png" alt="Foto de Mony">
-        </div>
-        <h3>Mony</h3>
-        <p><strong>Hace 2 semanas - Almuerzo⭐⭐⭐</strong></p>
-        <p>Café muy bueno, los cruasanes con mucha mantequilla(muy grasosos), buen ambiente , todo nuevo , sillas y mesas exclusivas, pocas cafeterías hay en Torrent como esta.</p>
-       
-    </div>
+      <div class="card">
+        <img src="fotos/re3.png" alt="Foto de Mony" />
+        <h5>Mony</h5>
+        <p><strong>Hace 2 semanas - Almuerzo ⭐⭐⭐</strong></p>
+        <p>Café muy bueno, los cruasanes con mucha mantequilla (muy grasosos), buen ambiente, todo nuevo, sillas y mesas exclusivas, pocas cafeterías hay en Torrent como esta.</p>
+      </div>
 
-    <div class="reseña">
-        <div class="foto">
-            <img src="fotos/re2.png" alt="Foto de Rocío">
-        </div>
-        <h3>Rocío B</h3>
-        <p><strong>Hace 3 meses - Cena⭐⭐⭐⭐⭐</strong></p>
+      <div class="card">
+        <img src="fotos/re2.png" alt="Foto de Rocío" />
+        <h5>Rocío B</h5>
+        <p><strong>Hace 3 meses - Cena ⭐⭐⭐⭐⭐</strong></p>
         <p>Un sitio ideal. Detallista y selecto en tapas y vinos, con mucha originalidad, la atención inmejorable.</p>
-        
-    </div>
+      </div>
 
-    <div class="reseña">
-        <div class="foto">
-            <img src="fotos/re1.png" alt="Foto de Christian">
-        </div>
-        <h3>Christian Garcia</h3>
-        <p><strong>Hace 1 mes - Café⭐⭐⭐⭐</strong></p>
+      <div class="card">
+        <img src="fotos/re1.png" alt="Foto de Christian" />
+        <h5>Christian Garcia</h5>
+        <p><strong>Hace 1 mes - Café ⭐⭐⭐⭐</strong></p>
         <p>Trato excelente y producto exquisito de primerísima calidad, tanto en tapas como en vinos.</p>
-    </div>
+      </div>
 
-    <div class="reseña">
-        <div class="foto">
-            <img src="fotos/re4.png" alt="Foto de Eva">
-        </div>
-        <h3>Eva Gomez Martinez</h3>
-        <p><strong>Hace 2 meses - Merienda⭐⭐⭐⭐</strong></p>
+      <div class="card">
+        <img src="fotos/re4.png" alt="Foto de Eva" />
+        <h5>Eva Gomez Martinez</h5>
+        <p><strong>Hace 2 meses - Merienda ⭐⭐⭐⭐</strong></p>
         <p>Un lugar excelente, gente muy amable, simpática. El local muy acogedor, lo recomiendo muchísimo un sitio para tomar un café o unos vinos con buen queso. Sin duda repetiré.</p>
+      </div>
+
     </div>
 
-    <a href="https://www.google.com/search?sca_esv=10d4ab18e2870239&hl=es&gl=es&tbm=lcl&sxsrf=AHTn8zqyd4RYzjKGRNBrnMwJKldYL-bUAA:1742467303567&q=Malvas%C3%ADa+caf%C3%A9+%26+vinos+Rese%C3%B1as&spell=1&sa=X&ved=2ahUKEwiDraXFvJiMAxWE8MkDHQV6MuQQBSgAegQICBAB&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews&rlfi=hd:;si:13290969517830176257,l,CiBNYWx2YXPDrWEgY2Fmw6kgJiB2aW5vcyBSZXNlw7FhcyICOAGSAQxlc3ByZXNzb19iYXI;mv:[[39.429467077319025,-0.47767259221143066],[39.42910712268096,-0.47813860778856915]]" target="_blank">
-        <button class="ver-mas-btn">Ver más reseñas</button>
+    <a href="https://www.google.com/search?sca_esv=1a884ab41b9b57e9&sxsrf=AE3TifNJ7sCn2s5WL1ZuRgpAr87JYX7VDg:1748182603963&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E_EBd4PRjmnMuAeP4UUyd2dMrM12MJzJFeiFU1-dgFXsrxol8_KzMDxHPAmxor5x3FddAUnieOBG4Cu3D_44D9KbSHDVOO84ZxgtWGAhcj4gzy7fCA%3D%3D&q=Malvas%C3%ADa+caf%C3%A9+%26vinos+Rese%C3%B1as&sa=X&ved=2ahUKEwjim_LY576NAxWF9rsIHXE_D8UQ0bkNegQIMxAD&biw=1920&bih=911&dpr=1" target="_blank" class="btn-custom">
+      Ver más reseñas
     </a>
-</section>
 
-<footer>
+  </main>
+
+  <footer>
     <p>&copy; 2025 MALVASIA | Contacto: malvasiatorrent@gmail.com | Tel: 665 45 26 85</p>
-</footer>
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
