@@ -1,184 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapas - MALVASIA</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MALVASIA - Tapas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f8f1e5;
+      color: #3e2723;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+    header img {
+      width: 100%;
+      max-width: 450px;
+      display: block;
+      margin: 20px auto;
+    }
 
-        body {
-            font-family: 'Georgia', serif;
-            background: #f8f1e5;
-            color: #3e2723;
-            line-height: 1.6;
-            flex: 1;
-        }
+    .navbar {
+      background-color: #4e342e;
+    }
 
-        header {
-            background: #6d4c41;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    .navbar a {
+      color: #fff !important;
+      font-size: 1.1em;
+    }
 
-        header img {
-            width: 60%;
-            max-width: 450px;
-            display: block;
-            margin: 0 auto;
-        }
+    .navbar a:hover {
+      background: #8d6e63;
+      border-radius: 5px;
+    }
 
-        nav {
-            background: #4e342e;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            font-size: 15px;
-        }
+    footer {
+      background-color: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+      font-size: 17px;
+    }
 
-        nav ul {
-            list-style: none;
-            text-align: center;
-        }
+    .card img {
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+    .card img:hover {
+      transform: scale(1.05);
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            padding: 10px;
-            transition: 0.3s;
-        }
+    .card-title {
+      color: #5d4037;
+    }
 
-        nav ul li a:hover {
-            background: #8d6e63;
-            border-radius: 5px;
-        }
-
-        .container {
-            padding: 40px;
-            margin: 20px 40px;
-            text-align: center;
-            flex: 1;
-        }
-
-        .tapa {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-            width: 300px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .tapa img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .precio {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #6d4c41;
-        }
-
-        footer {
-            width: 100%;
-            background-color: #3e2723;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 17px;
-        }
-
-    </style>
+    .card-body p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="fotos/logoblanco.png" alt="Logo de Cafetería MALVASIA">
-</header>
-<nav>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cafe.html">Cafés</a></li>
-        <li><a href="vino.html">Vinos</a></li>
-        <li><a href="tapas.html">Tapas</a></li> 
-        <li><a href="ofertas.html">Ofertas</a></li>
-        <li><a href="valo.html">Valoraciones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="patrocinadores.html">Patrocinadores</a></li>
-    </ul>
-</nav>
+  <header class="text-white text-center py-4" style="background-color: #6d4c41;">
+    <img src="fotos/logoblanco.png" alt="Logo de Cafetería MALVASIA" class="img-fluid" style="max-width: 300px;" />
+  </header>
 
-
-<section class="container">
-    <h2>Tapas Típicas Españolas</h2>
-    <p>Disfruta de una selección de tapas tradicionales de España, con ingredientes frescos y de calidad:</p>
-
-    <div class="tapa">
-        <img src="fotos/tortilla.png" alt="Tapa de tortilla española">
-        <h3>Tortilla Española</h3>
-        <p>La clásica tortilla de patatas, jugosa y deliciosa.</p>
-        <p class="precio">€5,50</p>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="cafe.html">Cafés</a></li>
+        <li class="nav-item"><a class="nav-link" href="vino.html">Vinos</a></li>
+        <li class="nav-item"><a class="nav-link" href="tapas.html">Tapas</a></li>
+        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+        <li class="nav-item"><a class="nav-link" href="valo.html">Valoraciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="patrocinadores.html">Patrocinadores</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="tapa">
-        <img src="fotos/jamon.png" alt="Tapa de jamón ibérico">
-        <h3>Jamón Ibérico</h3>
-        <p>Finas lonchas de jamón ibérico, el sabor de España.</p>
-        <p class="precio">€8,00</p>
+  <main class="container my-5">
+    <h2 class="text-center mb-4">Tapas Típicas Españolas</h2>
+    <p class="text-center mb-5">Disfruta de una selección de tapas tradicionales de España, con ingredientes frescos y de calidad:</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="fotos/tortilla.png" class="card-img-top" alt="Tortilla Española" />
+          <div class="card-body">
+            <h5 class="card-title">Tortilla Española</h5>
+            <p class="card-text">La clásica tortilla de patatas, jugosa y deliciosa.</p>
+            <p class="fw-bold">€5,50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="fotos/jamon.png" class="card-img-top" alt="Jamón Ibérico" />
+          <div class="card-body">
+            <h5 class="card-title">Jamón Ibérico</h5>
+            <p class="card-text">Finas lonchas de jamón ibérico, el sabor de España.</p>
+            <p class="fw-bold">€8,00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="fotos/croquetas.png" class="card-img-top" alt="Croquetas Caseras" />
+          <div class="card-body">
+            <h5 class="card-title">Croquetas Caseras</h5>
+            <p class="card-text">Deliciosas croquetas rellenas de bechamel y jamón.</p>
+            <p class="fw-bold">€4,50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="fotos/gambas.png" class="card-img-top" alt="Gambas a la Plancha" />
+          <div class="card-body">
+            <h5 class="card-title">Gambas a la Plancha</h5>
+            <p class="card-text">Gambas frescas, perfectas para compartir.</p>
+            <p class="fw-bold">€7,00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="fotos/bravas.png" class="card-img-top" alt="Patatas Bravas" />
+          <div class="card-body">
+            <h5 class="card-title">Patatas Bravas</h5>
+            <p class="card-text">Patatas fritas con salsa brava picante, una delicia.</p>
+            <p class="fw-bold">€4,00</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <div class="tapa">
-        <img src="fotos/croquetas.png" alt="Tapa de croquetas">
-        <h3>Croquetas Caseras</h3>
-        <p>Deliciosas croquetas rellenas de bechamel y jamón.</p>
-        <p class="precio">€4,50</p>
-    </div>
-
-    <div class="tapa">
-        <img src="fotos/gambas.png" alt="Tapa de gambas a la plancha">
-        <h3>Gambas a la Plancha</h3>
-        <p>Gambas frescas, perfectas para compartir.</p>
-        <p class="precio">€7,00</p>
-    </div>
-
-    <div class="tapa">
-        <img src="fotos/bravas.png" alt="Tapa de patatas bravas">
-        <h3>Patatas Bravas</h3>
-        <p>Patatas fritas con salsa brava picante, una delicia.</p>
-        <p class="precio">€4,00</p>
-    </div>
-
-   
-
-</section>
-
-<footer>
+  <footer>
     <p>&copy; 2025 MALVASIA | Contacto: malvasiatorrent@gmail.com | Tel: 665 45 26 85</p>
-</footer>
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
